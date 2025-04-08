@@ -67,8 +67,8 @@ RUN git clone --recurse-submodules https://github.com/sjmluo/TCPDBench
 RUN mkdir -p /TCPDBench/datasets
 
 # Docker only allows copying with relatives paths
-COPY ./features /TCPDBench/datasets
-COPY ./labels/Baseline_Pattern_Features_Server_117.json /TCPDBench/analysis/annotations/annotations.json
+# ADD ./features /TCPDBench/datasets
+# COPY ./labels/Baseline_Pattern_Features_Server_117.json /TCPDBench/analysis/annotations/annotations.json
 
 # Install Python dependencies inside the virtual environment
 RUN /opt/venv/bin/pip install -r /TCPDBench/analysis/requirements.txt
