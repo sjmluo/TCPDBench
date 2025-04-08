@@ -111,7 +111,7 @@ EXECDIR = "execs"
 #     "well_log",
 # ]
 
-DATASETS = np.genfromtxt(DATADIR + 'dataset_file_names.csv', dtype=str);
+DATASETS = np.genfromtxt(DATADIR + '/dataset_file_names.csv', dtype=str);
 DATASETS = [str(s) for s in DATASETS]
 
 DATASET_NAMES = {k: k for k in DATASETS}
