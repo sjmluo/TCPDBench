@@ -54,16 +54,21 @@ RUN echo "alias python='/opt/venv/bin/python'" >> /root/.bash_aliases && \
 RUN mv /bin/sh /bin/sh.old && cp /bin/bash /bin/sh
 
 # Clone the dataset repo
-RUN git clone https://github.com/alan-turing-institute/TCPD
+# RUN git clone https://github.com/alan-turing-institute/TCPD
 
 # Build the dataset
-RUN cd TCPD && make export
+# RUN cd TCPD && make export
 
 # Clone the repo
 RUN git clone --recurse-submodules https://github.com/sjmluo/TCPDBench
 
 # Copy the datasets into the benchmark dir
-RUN mkdir -p /TCPDBench/datasets && cp TCPD/export/*.json /TCPDBench/datasets/
+# RUN mkdir -p /TCPDBench/datasets && cp TCPD/export/*.json /TCPDBench/datasets/
+RUN mkdir -p /TCPDBench/datasets
+
+# Docker only allows copying with relatives paths
+COPY ./features /TCPDBench/datasets
+COPY ./labels/Baseline_Pattern_Features_Server_117.json /TCPDBench/analysis/annotations/annotations.json
 
 # Install Python dependencies inside the virtual environment
 RUN /opt/venv/bin/pip install -r /TCPDBench/analysis/requirements.txt
