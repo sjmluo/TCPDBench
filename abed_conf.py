@@ -63,53 +63,58 @@ BUILD_CMD = "make all"  # Build command
 ##############################################################################
 #                      Experiment parameters and settings                    #
 ##############################################################################
-DATADIR = "datasets"
+# DATADIR = "datasets"
+DATADIR = '/Users/163479_admin/Library/CloudStorage/OneDrive-Personal/UTS/Code/testing_code/testing_TCPD/features/'
 EXECDIR = "execs"
 
-DATASETS = [
-    "apple",
-    "bank",
-    "bee_waggle_6",
-    "bitcoin",
-    "brent_spot",
-    "businv",
-    "centralia",
-    "children_per_woman",
-    "co2_canada",
-    "construction",
-    "debt_ireland",
-    "gdp_argentina",
-    "gdp_croatia",
-    "gdp_iran",
-    "gdp_japan",
-    "global_co2",
-    "homeruns",
-    "iceland_tourism",
-    "jfk_passengers",
-    "lga_passengers",
-    "measles",
-    "nile",
-    "occupancy",
-    "ozone",
-    "quality_control_1",
-    "quality_control_2",
-    "quality_control_3",
-    "quality_control_4",
-    "quality_control_5",
-    "rail_lines",
-    "ratner_stock",
-    "robocalls",
-    "run_log",
-    "scanline_126007",
-    "scanline_42049",
-    "seatbelts",
-    "shanghai_license",
-    "uk_coal_employ",
-    "unemployment_nl",
-    "usd_isk",
-    "us_population",
-    "well_log",
-]
+# DATASETS = [
+#     "apple",
+#     "bank",
+#     "bee_waggle_6",
+#     "bitcoin",
+#     "brent_spot",
+#     "businv",
+#     "centralia",
+#     "children_per_woman",
+#     "co2_canada",
+#     "construction",
+#     "debt_ireland",
+#     "gdp_argentina",
+#     "gdp_croatia",
+#     "gdp_iran",
+#     "gdp_japan",
+#     "global_co2",
+#     "homeruns",
+#     "iceland_tourism",
+#     "jfk_passengers",
+#     "lga_passengers",
+#     "measles",
+#     "nile",
+#     "occupancy",
+#     "ozone",
+#     "quality_control_1",
+#     "quality_control_2",
+#     "quality_control_3",
+#     "quality_control_4",
+#     "quality_control_5",
+#     "rail_lines",
+#     "ratner_stock",
+#     "robocalls",
+#     "run_log",
+#     "scanline_126007",
+#     "scanline_42049",
+#     "seatbelts",
+#     "shanghai_license",
+#     "uk_coal_employ",
+#     "unemployment_nl",
+#     "usd_isk",
+#     "us_population",
+#     "well_log",
+# ]
+
+DATASETS = np.genfromtxt(DATADIR + 'dataset_file_names.csv', dtype=str);
+DATASETS = [str(s) for s in DATASETS]
+
 DATASET_NAMES = {k: k for k in DATASETS}
 
 METHODS = [
