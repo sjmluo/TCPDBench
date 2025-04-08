@@ -63,8 +63,7 @@ BUILD_CMD = "make all"  # Build command
 ##############################################################################
 #                      Experiment parameters and settings                    #
 ##############################################################################
-# DATADIR = "datasets"
-DATADIR = '/Users/163479_admin/Library/CloudStorage/OneDrive-Personal/UTS/Code/testing_code/testing_TCPD/features/'
+DATADIR = "datasets"
 EXECDIR = "execs"
 
 # DATASETS = [
