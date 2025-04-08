@@ -54,10 +54,10 @@ RUN echo "alias python='/opt/venv/bin/python'" >> /root/.bash_aliases && \
 RUN mv /bin/sh /bin/sh.old && cp /bin/bash /bin/sh
 
 # Clone the dataset repo
-# RUN git clone https://github.com/alan-turing-institute/TCPD
+RUN git clone https://github.com/alan-turing-institute/TCPD
 
 # Build the dataset
-# RUN cd TCPD && make export
+RUN cd TCPD && make export
 
 # Clone the repo
 RUN git clone --recurse-submodules https://github.com/sjmluo/TCPDBench
