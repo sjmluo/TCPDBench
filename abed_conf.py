@@ -63,12 +63,13 @@ BUILD_CMD = "make all"  # Build command
 ##############################################################################
 #                      Experiment parameters and settings                    #
 ##############################################################################
-DATADIR = "datasets"
+# DATADIR = "datasets"
+DATADIR = '/Users/163479_admin/Library/CloudStorage/OneDrive-Personal/UTS/Code/testing_code/testing_TCPD/features/'
 EXECDIR = "execs"
 
-# DATASETS = [
-#     "apple",
-#     "bank",
+DATASETS = [
+    "apple",
+    "bank",
 #     "bee_waggle_6",
 #     "bitcoin",
 #     "brent_spot",
@@ -109,10 +110,10 @@ EXECDIR = "execs"
 #     "usd_isk",
 #     "us_population",
 #     "well_log",
-# ]
+]
 
-DATASETS = np.genfromtxt(DATADIR + '/dataset_file_names.csv', dtype=str);
-DATASETS = [str(s) for s in DATASETS]
+# DATASETS = np.genfromtxt(DATADIR + 'dataset_file_names.csv', dtype=str);
+# DATASETS = [str(s) for s in DATASETS]
 
 DATASET_NAMES = {k: k for k in DATASETS}
 
